@@ -70,6 +70,7 @@ hamburgerMenu.addEventListener('click', function(e){
       .from('.homePage-img .second', {y: '110%', duration: 1, ease: 'power3.out'}, "-=1")
       .from('.circle-link', {x: '-50%', opacity: '0', duration: 1, ease: 'power3.out'}, '-=1')
       .from('.arrow', {x: '-20%', opacity: '0'}, '-=0.8')
+
     tl.eventCallback("onComplete", function(){
         document.body.classList.remove('overflow-hidden')
         document.body.children[2].style.display = 'none'
@@ -82,13 +83,66 @@ hamburgerMenu.addEventListener('click', function(e){
 
     gsap.registerPlugin(ScrollTrigger)
 
-    gsap.to('.section-title', 
+    gsap.from('#architecture', 
     {   scrollTrigger: {
-            trigger: '.getInTouch-page'
+            trigger: '#architecture',
+            start: 'top bottom',
+            toggleActions: 'restart none none reset' ,
         },
-        x: '1000px',
-        duration: 3
+        y: '50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
     })
+
+    gsap.from('#interiors', 
+    {   scrollTrigger: {
+            trigger: '#interiors',
+            start: 'top bottom',
+            toggleActions: 'restart none none reset' ,
+        },
+        y: '50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    gsap.from('#furniture', 
+    {   scrollTrigger: {
+            trigger: '#furniture',
+            start: 'top bottom',
+            toggleActions: 'restart none none reset',
+        },
+        y: '50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    gsap.from('.section-title', 
+    {   scrollTrigger: {
+            trigger: '.section-title',
+            toggleActions: 'restart none none reset',
+        },
+        y: '50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+    gsap.from('.getInTouch-page .references', 
+    {   scrollTrigger: {
+            trigger: '.section-title',
+            start: 'bottom bottom',
+            toggleActions: 'restart none none reset',
+        },
+        y: '50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+
+
 
 
 
