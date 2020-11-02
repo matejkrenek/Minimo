@@ -149,20 +149,32 @@ body.white a{
     margin: auto;
 }
 
-    .first{
+    .homePage-img:nth-child(1){
         position: absolute;
         width: 500px;
         height: 600px;
-        transform: scaleX(-1);
         right: 17.5%;
+        overflow: hidden;
     }
 
-    .second{
+        .first{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+    .homePage-img:nth-child(2){
         position: absolute;
         width: 350px;
         top: 20%;
         right: -12%;
+        overflow: hidden;
     }
+
+        .second{
+            width: 100%;
+            height: 100%;
+        }
 
     .main-content{
         width: 100%;
@@ -179,21 +191,34 @@ body.white a{
             letter-spacing: -2%;
             font-weight: 600;
             overflow: hidden;
+
         }
 
         h1.title-1 p,
         h1.title-2 p{
-            transform: translateY(100%);
+            transform: translateY(0%);
         }
 
-        .circle-link{
+        .overlay-box{
+            margin-top: 50px;
             width: 136.5px;
             height: 136.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle-link{
+            transform: translateY(0%);
+            opacity: 1;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             border: 1px solid;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: visible;
+
         }
 
             .content{
@@ -210,6 +235,7 @@ body.white a{
 
                 .arrow{
                     position: absolute;
+                    opacity: 1;
                     left: 100%;
                     margin-left: 1.25em;
                 }
@@ -230,6 +256,7 @@ body.white a{
 }
 
     .expand-item{
+        opacity: 1;
 
     }
         .fixed-part{
@@ -381,25 +408,28 @@ body.white a{
 
         h1.section-title{
             margin-bottom: 115px;
+            opacity: 1;
         }
 
         .references{
             display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
             .reference-item{
                 display: flex;
                 flex-direction: column;
-                margin-right: 100px;
             }
 
             .reference-item div{
                 margin-bottom: 2em;
             }
 
-            .reference-item p{
+            .reference-item p,
+            .reference-item a{
                 opacity: 0.6;
-                width: 160px;
+                width: 140px;
             }
 
             .reference-item p.about-company{
@@ -490,7 +520,7 @@ body.white a{
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 1000px;
         height: 550px;
     }
@@ -500,7 +530,7 @@ body.white a{
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 30px 0;
+            
         }
 
             .toggle-menu .menu-links a{
@@ -508,7 +538,7 @@ body.white a{
                 color: rgba(255, 255, 255, 0.2);
                 font-weight: 600;
                 letter-spacing: 0.05em;
-                margin-bottom: 40px;
+                margin-bottom: 50px;
                 transition: all 0.5s;
             }
 
@@ -538,7 +568,7 @@ body.white a{
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 60px 100px 60px 0
+            padding: 60px 100px 60px 0;
             
         }
 
@@ -546,6 +576,7 @@ body.white a{
             transform: scale(1.5);
             margin-left: 20px;
             margin-bottom: 30px;
+            
         }
 
             .description-info p.about-company{
@@ -563,12 +594,16 @@ body.white a{
                     margin-bottom: 30px;
                 }
 
-                    .toggle-menu .references .reference-item div{
+                .reference-item a:hover{
+                    text-decoration: underline;
+                }
+
+                    .references .reference-item .flex-links{
                         display: flex;
                         justify-content: flex-start;
 
                     }
-                    .toggle-menu .reference-item div p{
+                    .reference-item .flex-links a{
                         width: auto;
                         margin-right: 30px;
                         
@@ -579,6 +614,7 @@ body.white a{
             width: 1px;
             background-color: rgba(255, 255, 255, 0.2);
             height: 100%;
+            margin: 0 80px;
         }
 
         body.white .horizontal-line{
@@ -597,7 +633,7 @@ body.white a{
 
         .overlay .layer{
             flex: 1;
-            background-color: #121212;
+            background: #171717;
             border: 1px solid rgba(255, 255, 255, 0.00)
         }
 

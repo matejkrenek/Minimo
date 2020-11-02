@@ -64,15 +64,33 @@ hamburgerMenu.addEventListener('click', function(e){
       .to('.layer-2', {y: '-100vh', duration: 0.7, ease: 'expo.in'}, "-=0.6")
       .to('.layer-4', {y: '-100vh', duration: 0.7, ease: 'expo.in'}, "-=0.6")
       .to('.layer-logo', {y: '-100vh', duration: 0.7, ease: 'expo.in'}, '-=1')
-      .to('.title-1 p', {y: '0%', opacity: '1', duration: 0.5})
-      .to('.title-2 p', {y: '0%', opacity: '1', duration: 0.5}, "-=0.4")
-
+      .from('.title-1 p', {y: '100%', duration: 0.5})
+      .from('.title-2 p', {y: '100%', duration: 0.5}, "-=0.4")
+      .from('.homePage-img .first', {y: '110%', duration: 1, ease: 'power3.out'}, '-=0.4')
+      .from('.homePage-img .second', {y: '110%', duration: 1, ease: 'power3.out'}, "-=1")
+      .from('.circle-link', {x: '-50%', opacity: '0', duration: 1, ease: 'power3.out'}, '-=1')
+      .from('.arrow', {x: '-20%', opacity: '0'}, '-=0.8')
     tl.eventCallback("onComplete", function(){
         document.body.classList.remove('overflow-hidden')
         document.body.children[2].style.display = 'none'
+
     })
 
     tl.eventCallback("onStart", function(){
         window.scroll(0, 0)
     })
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.to('.section-title', 
+    {   scrollTrigger: {
+            trigger: '.getInTouch-page'
+        },
+        x: '1000px',
+        duration: 3
+    })
+
+
+
+    
 

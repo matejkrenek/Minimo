@@ -28,17 +28,19 @@
 
         <!-- Home Page -->
         <section class="home-page">
-            <img class="first" src="images/first.jpg" alt="first">
-            <img class="second" src="images/second.jpg" alt="second">
+            <div class="homePage-img"><img class="first" src="images/first.jpg" alt="first"></div>
+            <div class="homePage-img"><img class="second" src="images/second.jpg" alt="second"></div>
             <div class="main-content">
                 <h1 class="title-1"><p>Minimalist</p></h1>
                 <h1 class="title-2"><p>Furniture&Interior</p></h1>
-                <a href="#" class="circle-link">
-                    <div class="content">
-                        <p>Continue</p>
-                        <img class="arrow" src="svgs/arrow.svg" alt="arrow">
-                    </div>
-                </a>
+                <div class="overlay-box">
+                    <a href="#" class="circle-link">
+                        <div class="content">
+                            <p>Continue</p>
+                            <img class="arrow" src="svgs/arrow.svg" alt="arrow">
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -173,18 +175,20 @@
                 <div class="reference-item">
                     <div>
                         <h5>phone number</h5>
-                        <a href="callto:+420777899245">+420 777 899 245</a>
+                        <p>+420 777 899 245</p>
                     </div>
                     <div>
-                        <h5>social medie</h5>
-                        <a href="https://facebook.com" target="_blank">Facebook</a>
-                        <a href="https://twitter.com" target="_blank">Twitter</a>
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                        <h5>social media</h5>
+                        <div class="flex-links">
+                            <a href="https://facebook.com" target="_blank">Facebook</a>
+                            <a href="https://twitter.com" target="_blank">Twitter</a>
+                            <a href="https://instagram.com" target="_blank">Instagram</a>
+                        </div>
                     </div>
                 </div>
                 <div class="reference-item">
                     <h5>e-mail</h5>
-                    <a href="mailto: submit@minimo.com">submit@minimo.com</p>
+                    <a href="mailto:submit@minim.com">Submit@minimo.com</a>
                 </div>
                 <div class="reference-item">
                     <h5>london</h5>
@@ -233,7 +237,7 @@
                 <div class="references">
                     <div class="reference-item">
                         <h5>phone number</h5>
-                        <a href="callto:+420777899245">+420 777 899 245</a>
+                        <p>+420 777 899 245</p>
                     </div>
                     <div class="reference-item">
                         <h5>e-mail</h5>
@@ -241,10 +245,10 @@
                     </div>
                     <div class="reference-item">
                         <h5>social media</h5>
-                        <div>
-                            <a>Facebook</p>
-                            <p>Twitter</p>
-                            <p>Instagram</p>
+                        <div class="flex-links">
+                            <a href="https://facebook.com" target="_blank">Facebook</a>
+                            <a href="https://twitter.com" target="_blank">Twitter</a>
+                            <a href="https://instagram.com" target="_blank">Instagram</a>
                         </div>
 
                     </div>
@@ -262,6 +266,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 
 </body>
