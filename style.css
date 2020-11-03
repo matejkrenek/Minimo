@@ -238,7 +238,7 @@ body.white a{
                     position: absolute;
                     opacity: 1;
                     left: 100%;
-                    margin-left: 1.25em;
+                    margin-left: 20px;
                 }
 
                 body.white .arrow{
@@ -361,6 +361,8 @@ body.white a{
                     .item.one img{
                         width: 100%;
                         height: 646px;
+                        box-shadow: 0 5px 10px rgba(12, 12, 12, 0.5);
+
                     }
 
                 .item.two{
@@ -371,6 +373,8 @@ body.white a{
                     .item.two img{
                         width: 100%;
                         height: 501px;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
                     }
         .expanded-part .bottom{
             display: flex;
@@ -385,6 +389,8 @@ body.white a{
                 .item.three img{
                     width: 100%;
                     height: 578px;
+                    box-shadow: 0 5px 10px rgba(12, 12, 12, 0.5);
+
                 }
 
             .item.four{
@@ -395,6 +401,8 @@ body.white a{
                 .item.four img{
                     width: 100%;
                     height: 694px;
+                    box-shadow: 0 5px 10px rgba(12, 12, 12, 0.5);
+
                 }
 
     .getInTouch-page{
@@ -766,7 +774,7 @@ body.white a{
         height: 125px;
     }
     .arrow{
-        margin-left: 1em;
+        margin-left: 16px;
         width: 70px;
     }
     .circle-link:hover .content{
@@ -864,7 +872,7 @@ body.white a{
         height: 115px;
     }
     .arrow{
-        margin-left: 1em;
+        margin-left: 16px;
         width: 60px;
     }
     .circle-link:hover .content{
@@ -967,11 +975,6 @@ body.white a{
         font-size: 10px;
     }
 
-    .item p{
-        opacity: 0.6;
-        font-size: 12px;
-        width: 280px;
-    }
 
     .item p{
         opacity: 0.6;
@@ -991,6 +994,313 @@ body.white a{
         align-items: center;
     }
 }
+
+@media (max-width: 1000px){
+    .nav-list{
+        display: none;
+    }
+
+
+
+    .toggle-menu .menu-container{
+        width: 1000px;
+        height: 100vh;
+    }
+
+    .toggle-menu .menu-links{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 30%;
+    }
+
+    .toggle-menu .description-info{
+        display: none;
+    }
+    .toggle-menu .horizontal-line{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .homePage-img:nth-child(1){
+        width: 375px;
+        height: 425px;
+        right: 20%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 25%;
+        width: 225px;
+
+    }
+
+    .home-page h1{
+        font-size: 80px;
+    }
+
+    .overlay-box{
+        width: 110px;
+        height: 110px;
+    }
+    .circle-link:hover .content{
+        transform: translateX(0.9em);
+    }
+
+    .fixed-part h3{
+        font-size: 60px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .homePage-img:nth-child(1){
+        width: 350px;
+        height: 400px;
+        right: 20%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 25%;
+        width: 200px;
+
+    }
+
+    .home-page h1{
+        font-size: 70px;
+    }
+
+    .item.one{
+        width: 375px;
+        
+    }
+
+        .item.one img{
+            height: 450px;
+        }
+
+    .item.two{
+        width: 500px; 
+        
+    }
+        .item.two img{
+            height: 350px;
+        }
+
+    .item.three{
+        width: 500px;
+        margin-right: 0;
+    }
+
+        .item.three img{
+            height: 350px;
+        }
+
+    .item.four{
+        width: 375px;
+    }
+
+        .item.four img{
+            height: 450px;
+        }
+
+    .toggle-menu .menu-links{
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 700px){
+    .toggle-menu .menu-links{
+        padding-left: 20%;
+    }
+
+    .homePage-img:nth-child(1){
+        width: 300px;
+        height: 350px;
+        right: 20%;
+        top: 5%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 30%;
+        width: 175px;
+        right: -5%;
+
+    }
+
+    .home-page h1{
+        font-size: 60px;
+    }
+
+    .overlay-box{
+        width: 105px;
+        height: 105px;
+    }
+
+    .arrow{
+        width: 50px;
+        margin-left: 14px;
+    }
+
+    .circle-link:hover .content{
+        transform: translateX(1em);
+    }
+
+    .content p{
+        font-size: 9px;
+    }
+
+    .fixed-part h3{
+        font-size: 45px;
+    }
+
+    .fixed-part img.chevron-btn{
+        transform: scale(1);
+    }
+
+    .item.one{
+        width: 350px;
+        
+    }
+
+        .item.one img{
+            height: 425px;
+        }
+
+    .item.two{
+        width: 450px; 
+        
+    }
+        .item.two img{
+            height: 300px;
+        }
+
+    .item.three{
+        width: 450px;
+        margin-right: 0;
+    }
+
+        .item.three img{
+            height: 300px;
+        }
+
+    .item.four{
+        width: 350px;
+    }
+
+        .item.four img{
+            height: 425px;
+        }
+
+    .item p{
+        width: 325px;
+    }
+}
+
+@media (max-width: 600px){
+    .toggle-menu .menu-links{
+        padding-left: 15%;
+    }
+
+    .toggle-menu .menu-links a{
+        font-size: 60px;
+    }
+
+
+
+    .home-page h1{
+        font-size: 50px;
+    }
+
+    .homePage-img:nth-child(1){
+        width: 250px;
+        height: 300px;
+        top: 10%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 35%;
+        width: 150px;
+
+    }
+
+    .fixed-part h3{
+        font-size: 40px;
+    }
+
+    .overlay-box{
+        width: 100px;
+        height: 100px;
+    }
+
+    .arrow{
+        width: 45px;
+        margin-left: 12px;
+    }
+
+    .circle-link:hover .content{
+        transform: translateX(1.1em);
+    }
+
+    .content p{
+        font-size: 8px;
+    }
+
+    .item.one{
+        width: 250px;
+        
+    }
+
+        .item.one img{
+            height: 350px;
+        }
+
+    .item.two{
+        width: 350px; 
+        
+    }
+        .item.two img{
+            height: 225px;
+        }
+
+    .item.three{
+        width: 350px;
+        margin-right: 0;
+    }
+
+        .item.three img{
+            height: 225px;
+        }
+
+    .item.four{
+        width: 250px;
+    }
+
+        .item.four img{
+            height: 350px;
+        }
+
+    .item h5{
+        font-size: 8px;
+    }
+
+
+    .item p{
+        opacity: 0.6;
+        font-size: 10px;
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 500px){
+
+
+
+
+
+
 
 
 
