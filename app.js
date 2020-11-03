@@ -1,10 +1,10 @@
-const chevronBtn = document.querySelectorAll('.chevron-btn');
+const fixedPartBtn = document.querySelectorAll('.fixed-part');
 
-chevronBtn.forEach(function(btn){
+fixedPartBtn.forEach(function(btn){
     btn.addEventListener('click', function(e){
         e.preventDefault()
-        btn.parentElement.parentElement.children[1].classList.toggle('active')
-        btn.classList.toggle('active')
+        btn.nextElementSibling.classList.toggle('active')
+        btn.children[1].classList.toggle('active')
  
     });
 })
@@ -16,17 +16,17 @@ navLink.forEach(function(link){
     link.addEventListener('click', function(e){
         e.preventDefault()
         var id = link.children[0].href.split('#')[1]
-        var expandItem = document.querySelector(`#${id}`)
+        var fixedPart = document.querySelector(`#${id}`)
 
-        window.scrollBy(0, expandItem.getBoundingClientRect().top - navbar.getBoundingClientRect().height)
+        window.scrollBy(0, fixedPart.getBoundingClientRect().top - 50)
 
 
 
 
         setTimeout(function(){
-            expandItem.children[1].classList.add('active')
-            expandItem.children[0].children[1].classList.add('active')
-        }, 400)
+            fixedPart.children[1].classList.add('active')
+            fixedPart.nextElementSibling.classList.add('active')
+        }, 200)
         
     })
 })
@@ -121,7 +121,8 @@ hamburgerMenu.addEventListener('click', function(e){
 
     gsap.from('.section-title', 
     {   scrollTrigger: {
-            trigger: '.section-title',
+            trigger: '.getInTouch-page',
+            start: 'top bottom',
             toggleActions: 'restart none none reset',
         },
         y: '50%',
