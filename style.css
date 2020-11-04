@@ -1527,7 +1527,7 @@ body.white a{
     }
 }
 
-@media (max-width: 412px){
+@media (max-width: 413px){
     .reference-item:nth-child(2){
         flex-direction: column;
     }
