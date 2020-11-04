@@ -24,6 +24,7 @@ body{
     font-size: 1em;
     letter-spacing: 0.01em;
     transition: all 0.5s;
+    overflow-x: hidden;
 }
 
 body.overflow-hidden{
@@ -146,6 +147,7 @@ body.white a{
     position: relative;
     width: 75%;
     height: 90vh;
+    max-height: 1000px;
     margin: auto;
     margin-bottom: 7em;
 }
@@ -433,8 +435,12 @@ body.white a{
             }
 
             .reference-item div{
-                margin-bottom: 2em;
+                margin-bottom: 0em;
 
+            }
+
+            .reference-item:nth-child(2) div:nth-child(1){
+                margin-bottom: 2em;
             }
 
             .reference-item p,
@@ -444,6 +450,8 @@ body.white a{
                 width: 150px;
                 display: block;
                 position: relative;
+                margin: 0 60px 0 0;
+
 
 
             }
@@ -464,6 +472,8 @@ body.white a{
                     width: 100%;
                     transition: all 0.5s;
                 }
+
+
 
             .reference-item p.about-company{
                 width: 400px;
@@ -526,6 +536,10 @@ body.white a{
         ul.social-links li:hover::after{
             width: 130%;
             transition: all 0.3s;
+        }
+
+        body.white ul.social-links li::after{
+            background-color: #0C0C0C;
         }
 
     .toggle-menu{
@@ -637,6 +651,7 @@ body.white a{
                 }
 
                     .references .reference-item .flex-links{
+                        margin: 0;
                         display: flex;
                         justify-content: flex-start;
 
@@ -649,7 +664,7 @@ body.white a{
 
         .horizontal-line{
             position: relative;
-            width: 1px;
+            width: 1
             background-color: rgba(255, 255, 255, 0.2);
             height: 100%;
             margin: 0 80px;
@@ -686,6 +701,25 @@ body.white a{
         }
 /* media query */
 @media (max-width: 1675px){
+
+
+    .homePage-img:nth-child(1){
+        width: 400px;
+        height: 475px;
+        right: 20%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 20%;
+        right: -10%;
+        width: 275px;
+    }
+
+    
+    .home-page h1,
+    .section-title{
+        font-size: 124px;
+    }
 
     .item.one{
         width: 440px;
@@ -724,6 +758,20 @@ body.white a{
 }
 
 @media (max-width: 1500px){
+    .references{
+        justify-content: flex-start;
+    }
+
+    .reference-item:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .reference-item:nth-child(2) div{
+        margin-bottom: 0;
+    }
+
     .item.one{
         width: 400px;
         
@@ -783,7 +831,6 @@ body.white a{
         width: 425px;
         height: 500px;
         right: 20%;
-        top: 10%;
     }
 
     .homePage-img:nth-child(2){
@@ -893,6 +940,11 @@ body.white a{
 }
 
 @media (max-width: 1200px){
+    h1.section-title{
+        margin-bottom: 75px;
+
+    }
+
     .home-page h1,
     .section-title{
         font-size: 110px;
@@ -960,7 +1012,7 @@ body.white a{
     .reference-item a{
         opacity: 0.6;
         font-size: 12px;
-        width: 115px;
+        width: 95px;
     }
 
     .item p{
@@ -1071,6 +1123,11 @@ body.white a{
 }
 
 @media (max-width: 900px){
+    h1.section-title{
+        margin-bottom: 65px;
+        
+    }
+
     .homePage-img:nth-child(1){
         width: 375px;
         height: 425px;
@@ -1105,7 +1162,7 @@ body.white a{
         align-items: center;
         justify-content: center;
         margin: 30px 0;
-        font-size: 16px;
+        font-size: 12px;
     }
 
         .footer .social-links li{
@@ -1119,7 +1176,7 @@ body.white a{
     }
         ul.rights li,
         ul.rights p.copyright{
-            font-size: 12px;
+            font-size: 10px;
             margin: 0;
             margin-bottom: 10px;
             padding: 0 10px;
@@ -1132,6 +1189,16 @@ body.white a{
 }
 
 @media (max-width: 800px){
+    .home-page{
+
+        margin-bottom: 3em;
+    }
+
+    .review-page{
+
+        margin-bottom: 150px;
+    }
+
     .homePage-img:nth-child(1){
         width: 350px;
         height: 400px;
@@ -1147,6 +1214,9 @@ body.white a{
 
     .home-page h1,
     .section-title{
+        font-size: 90px;
+    }
+    .home-page h1:nth-child(2){
         font-size: 70px;
     }
 
@@ -1194,6 +1264,11 @@ body.white a{
 }
 
 @media (max-width: 700px){
+    h1.section-title{
+        margin-bottom: 50px;
+        opacity: 1;
+    }
+
     .toggle-menu .menu-links{
         padding-left: 20%;
     }
@@ -1214,6 +1289,10 @@ body.white a{
 
     .home-page h1,
     .section-title{
+        font-size: 80px;
+    }
+
+    .home-page h1:nth-child(2){
         font-size: 60px;
     }
 
@@ -1291,11 +1370,12 @@ body.white a{
         font-size: 60px;
     }
 
-
-
     .home-page h1,
     .section-title{
-        font-size: 50px;
+        font-size: 80px;
+    }
+    .home-page h1:nth-child(2){
+        font-size: 40px;
     }
 
     .homePage-img:nth-child(1){
@@ -1399,10 +1479,11 @@ body.white a{
         align-items: center;
     }
 
-
-
     .home-page h1,
     .section-title{
+        font-size: 70px;
+    }
+    .home-page h1:nth-child(2){
         font-size: 40px;
     }
 
