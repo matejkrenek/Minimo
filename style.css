@@ -147,6 +147,7 @@ body.white a{
     width: 75%;
     height: 90vh;
     margin: auto;
+    margin-bottom: 7em;
 }
 
     .homePage-img:nth-child(1){
@@ -420,6 +421,7 @@ body.white a{
 
         .references{
             display: flex;
+            flex-wrap: wrap;
             align-items: flex-start;
             justify-content: space-between;
         }
@@ -432,10 +434,12 @@ body.white a{
 
             .reference-item div{
                 margin-bottom: 2em;
+
             }
 
             .reference-item p,
             .reference-item a{
+                font-size: 14px;
                 opacity: 0.6;
                 width: 150px;
                 display: block;
@@ -463,11 +467,15 @@ body.white a{
 
             .reference-item p.about-company{
                 width: 400px;
+                font-size: 16px;
+                margin-bottom: 20px;
             }
 
             .reference-item h5{
                 text-transform: uppercase;
                 margin-bottom: 8px;
+                font-size: 12px;
+
             }
 
     .footer{
@@ -482,6 +490,10 @@ body.white a{
 
     .footer ul{
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
         font-size: 14px;
     }
 
@@ -521,7 +533,7 @@ body.white a{
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #0C0C0C;
         color: #F2F2F2;
         z-index: 1000;
@@ -649,7 +661,7 @@ body.white a{
 
         .overlay{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             position: fixed;
             top: 0;
             left: 0;
@@ -674,14 +686,7 @@ body.white a{
         }
 /* media query */
 @media (max-width: 1675px){
-    .homePage-img:nth-child(1){
-        width: 425px;
-        height: 525px;
-    }
 
-    .homePage-img:nth-child(2){
-        width: 300px;
-    }
     .item.one{
         width: 440px;
         
@@ -751,6 +756,26 @@ body.white a{
         .item.four img{
             height: 550px;
         }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+        .footer .social-links{
+            margin: 30px 0;
+        }
+
+        .footer ul.rights{
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+        }
+            ul.rights li,
+            ul.rights p.copyright{
+                margin: 0;
+                margin-bottom: 10px;
+                padding: 0 10px;
+            }
 }
 
 @media (max-width: 1400px){
@@ -758,14 +783,16 @@ body.white a{
         width: 425px;
         height: 500px;
         right: 20%;
+        top: 10%;
     }
 
     .homePage-img:nth-child(2){
-        top: 25%;
+        top: 30%;
         width: 275px;
     }
 
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 124px;
     }
 
@@ -850,11 +877,14 @@ body.white a{
             height: 475px;
         }
 
-    .item h5{
+    .item h5,
+    .reference-item h5{
         font-size: 10px;
     }
 
-    .item p{
+    .item p,
+    .reference-item p,
+    .reference-item a{
         opacity: 0.6;
         font-size: 12px;
 
@@ -863,9 +893,12 @@ body.white a{
 }
 
 @media (max-width: 1200px){
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 110px;
     }
+
+
 
     .overlay-box{
         width: 115px;
@@ -917,19 +950,27 @@ body.white a{
             height: 400px;
         }
 
-    .item h5{
+    .item h5,
+    .reference-item h5{
         font-size: 10px;
     }
 
-    .item p{
+    .item p,
+    .reference-item p,
+    .reference-item a{
         opacity: 0.6;
         font-size: 12px;
+        width: 115px;
+    }
+
+    .item p{
         width: 280px;
     }
 }
 
 @media (max-width: 1100px){
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 90px;
     }
 
@@ -971,14 +1012,20 @@ body.white a{
             height: 500px;
         }
 
-    .item h5{
+    .item h5,
+    .reference-item h5{
         font-size: 10px;
     }
 
 
-    .item p{
+    .item p,
+    .reference-item p,
+    .reference-item a{
         opacity: 0.6;
         font-size: 12px;
+    }
+
+    .item p{
         width: 375px;
     }
 
@@ -1036,7 +1083,8 @@ body.white a{
 
     }
 
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 80px;
     }
 
@@ -1052,6 +1100,35 @@ body.white a{
         font-size: 60px;
     }
 
+    .footer .social-links{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+        font-size: 16px;
+    }
+
+        .footer .social-links li{
+            margin: 0 15px;
+        }
+
+    .footer ul.rights{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+        ul.rights li,
+        ul.rights p.copyright{
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+
+    .reference-item p.about-company{
+        font-size: 12px;
+    }
+
 }
 
 @media (max-width: 800px){
@@ -1059,6 +1136,7 @@ body.white a{
         width: 350px;
         height: 400px;
         right: 20%;
+
     }
 
     .homePage-img:nth-child(2){
@@ -1067,7 +1145,8 @@ body.white a{
 
     }
 
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 70px;
     }
 
@@ -1108,6 +1187,10 @@ body.white a{
     .toggle-menu .menu-links{
         padding-left: 25%;
     }
+
+    h1.section-title{
+        margin-bottom: 70px;
+    }
 }
 
 @media (max-width: 700px){
@@ -1119,17 +1202,18 @@ body.white a{
         width: 300px;
         height: 350px;
         right: 20%;
-        top: 5%;
+        top: 15%;
     }
 
     .homePage-img:nth-child(2){
-        top: 30%;
+        top: 35%;
         width: 175px;
         right: -5%;
 
     }
 
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 60px;
     }
 
@@ -1209,14 +1293,15 @@ body.white a{
 
 
 
-    .home-page h1{
+    .home-page h1,
+    .section-title{
         font-size: 50px;
     }
 
     .homePage-img:nth-child(1){
         width: 250px;
         height: 300px;
-        top: 10%;
+        top: 20%;
     }
 
     .homePage-img:nth-child(2){
@@ -1281,20 +1366,85 @@ body.white a{
             height: 350px;
         }
 
-    .item h5{
+    .item h5,
+    .reference-item h5{
         font-size: 8px;
     }
 
 
-    .item p{
+    .item p,
+    .reference-item a,
+    .reference-item p{
         opacity: 0.6;
         font-size: 10px;
+    }
+
+    .item p{
         width: 250px;
     }
 
 }
 
 @media (max-width: 500px){
+    .toggle-menu .menu-links a{
+        font-size: 60px;
+    }
+
+    .toggle-menu .menu-links a span{
+        display: none;
+    }
+
+    .toggle-menu .menu-links{
+        padding-left: 0%;
+        align-items: center;
+    }
+
+
+
+    .home-page h1,
+    .section-title{
+        font-size: 40px;
+    }
+
+    .homePage-img:nth-child(1){
+        width: 200px;
+        height: 250px;
+        top: 25%;
+    }
+
+    .homePage-img:nth-child(2){
+        top: 40%;
+        width: 125px;
+
+    }
+
+    .fixed-part h3{
+        font-size: 30px;
+    }
+
+    .overlay-box{
+        width: 90px;
+        height: 90px;
+    }
+
+    .arrow{
+        width: 40px;
+        margin-left: 10px;
+    }
+
+    .circle-link:hover .content{
+        transform: translateX(1em);
+    }
+
+    .content p{
+        font-size: 7px;
+    }
+
+    .reference-item p.about-company{
+        width: 250px;
+
+    }
+}
 
 
 
