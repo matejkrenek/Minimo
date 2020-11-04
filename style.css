@@ -413,7 +413,7 @@ body.white a{
         margin: auto;
         display: flex;
         flex-direction: column;
-        margin-bottom: 220px;
+        margin-bottom: 140px;
     }
 
         h1.section-title{
@@ -1524,6 +1524,12 @@ body.white a{
     .reference-item p.about-company{
         width: 250px;
 
+    }
+}
+
+@media (max-width: 412px){
+    .reference-item:nth-child(2){
+        flex-direction: column;
     }
 }
 
