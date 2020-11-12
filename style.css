@@ -9,11 +9,10 @@
     src: url('font/HelveticaNeueLt.ttf');
 }
 
+
 html{
     scroll-behavior: smooth;
 }
-
-
 
 body{
     width: 100%;
@@ -664,7 +663,7 @@ body.white a{
 
         .horizontal-line{
             position: relative;
-            width: 1
+            width: 1px;
             background-color: rgba(255, 255, 255, 0.2);
             height: 100%;
             margin: 0 80px;
@@ -699,10 +698,9 @@ body.white a{
             z-index: 10001;
             opacity: 0;
         }
+
 /* media query */
 @media (max-width: 1675px){
-
-
     .homePage-img:nth-child(1){
         width: 400px;
         height: 475px;

@@ -1,3 +1,4 @@
+// Open or Close the Tab
 const fixedPartBtn = document.querySelectorAll('.fixed-part');
 
 fixedPartBtn.forEach(function(btn){
@@ -8,9 +9,10 @@ fixedPartBtn.forEach(function(btn){
  
     });
 })
+
+// Nav links scroll to the section
 const navLink = document.querySelectorAll('.nav-link')
 const navbar = document.querySelector('.navbar')
-
 
 navLink.forEach(function(link){
     link.addEventListener('click', function(e){
@@ -32,7 +34,7 @@ navLink.forEach(function(link){
 })
 
 
-
+// Toggle between light mode and dark mode
 const logoBtn = document.querySelector('.logo')
 
 logoBtn.addEventListener('click', function(e){
@@ -42,6 +44,7 @@ logoBtn.addEventListener('click', function(e){
 
 })
 
+// Toggle hamburger menu
 const hamburgerMenu = document.querySelector('.hamburger-menu')
 
 hamburgerMenu.addEventListener('click', function(e){
@@ -56,15 +59,17 @@ hamburgerMenu.addEventListener('click', function(e){
     }
 })
 
+// Animations using GSAP
     if(window.innerWidth >= 1000){
-        loadingAnimation()
+        animation()
     } else{
         document.querySelector('.overlay').style.display = 'none'
         document.body.classList.remove('overflow-hidden')
 
     }
 
-    function loadingAnimation() {
+    function animation() {
+        // load animation
         var tl = gsap.timeline()
         .to('.layer-logo', {opacity: 1}, "+=0.5")
           .to('.layer-1', {y: '-100vh', duration: 0.7, ease: 'expo.in'}, "+=0.3")
@@ -89,70 +94,73 @@ hamburgerMenu.addEventListener('click', function(e){
         tl.eventCallback("onStart", function(){
             window.scroll(0, 0)
         })
+
+        // Scrolling animations 
+        gsap.registerPlugin(ScrollTrigger)
+
+
+            gsap.from('#architecture', 
+            {   scrollTrigger: {
+                    trigger: '#architecture',
+                    start: 'top bottom',
+                    toggleActions: 'restart none none reset' ,
+                },
+                y: '50%',
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            })
+
+            gsap.from('#interiors', 
+            {   scrollTrigger: {
+                    trigger: '#interiors',
+                    start: 'top bottom',
+                    toggleActions: 'restart none none reset' ,
+                },
+                y: '50%',
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            })
+
+            gsap.from('#furniture', 
+            {   scrollTrigger: {
+                    trigger: '#furniture',
+                    start: 'top bottom',
+                    toggleActions: 'restart none none reset',
+                },
+                y: '50%',
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            })
+
+            gsap.from('.section-title', 
+            {   scrollTrigger: {
+                    trigger: '.getInTouch-page',
+                    start: 'top bottom',
+                    toggleActions: 'restart none none reset',
+                },
+                y: '50%',
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            })
+
+            gsap.from('.getInTouch-page .references', 
+            {   scrollTrigger: {
+                    trigger: '.section-title',
+                    start: 'bottom bottom',
+                    toggleActions: 'restart none none reset',
+                },
+                y: '50%',
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            })
     }
 
-    gsap.registerPlugin(ScrollTrigger)
-
-
-    gsap.from('#architecture', 
-    {   scrollTrigger: {
-            trigger: '#architecture',
-            start: 'top bottom',
-            toggleActions: 'restart none none reset' ,
-        },
-        y: '50%',
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    gsap.from('#interiors', 
-    {   scrollTrigger: {
-            trigger: '#interiors',
-            start: 'top bottom',
-            toggleActions: 'restart none none reset' ,
-        },
-        y: '50%',
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    gsap.from('#furniture', 
-    {   scrollTrigger: {
-            trigger: '#furniture',
-            start: 'top bottom',
-            toggleActions: 'restart none none reset',
-        },
-        y: '50%',
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    gsap.from('.section-title', 
-    {   scrollTrigger: {
-            trigger: '.getInTouch-page',
-            start: 'top bottom',
-            toggleActions: 'restart none none reset',
-        },
-        y: '50%',
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
-
-    gsap.from('.getInTouch-page .references', 
-    {   scrollTrigger: {
-            trigger: '.section-title',
-            start: 'bottom bottom',
-            toggleActions: 'restart none none reset',
-        },
-        y: '50%',
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    })
+    
 
 
     
