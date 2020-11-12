@@ -1,4 +1,4 @@
 # Minimo Website
 
-- Design was made by: https://dribbble.com/TheLexdesign
+- Design was make by: https://dribbble.com/TheLexdesign
 - Images are from: https://minimalissimo.com/
